@@ -40,7 +40,7 @@ server <- function(input, output) {
   data = data.frame(
    Task = c("Task 1", "Task 2"),
    StartDate = as.Date(c("2024-03-10", "2024-04-30")),
-   EndDate = as.Date(c("2024-94-30", "2024-06-15"))
+   EndDate = as.Date(c("2024-04-30", "2024-06-15"))
   ) %>%
    # Add an ID column - used later to remove row with certain ID
    mutate(ID = row_number(), .before = Task) %>%
