@@ -4,10 +4,17 @@ library(DT)
 library(shiny)
 library(glue)
 library(WriteXLS)
+library(bslib)
 
 ## source application files
 #source("global.R", local = TRUE)
 
+# Workaround for Chromium Issue 468227
+downloadButton <- function(...) {
+ tag <- shiny::downloadButton(...)
+ tag$attribs$download <- NULL
+ tag
+}
 
 ui <- fluidPage(
  sidebarLayout(

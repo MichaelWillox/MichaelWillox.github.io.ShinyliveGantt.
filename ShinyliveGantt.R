@@ -1,3 +1,7 @@
+# This file is saved in the directory for the local repo.
+# The app.R is saved in Gantt
+# Shinylive creates files in doc
+
 # Load libraries
 library(shinylive)
 library(httpuv)
