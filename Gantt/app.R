@@ -131,6 +131,7 @@ server <- function(input, output) {
    paste("TaskData-", Sys.Date(), ".csv", sep="")
   },
   content = function(file) {
+   df$data <- df$data[,-5]
    write.csv(df$data, file, row.names=FALSE)
   },
   contentType = "text/csv"
